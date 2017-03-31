@@ -57,12 +57,43 @@ And start and stop the service using the following API calls:
 [nodeService stop];
 ```
 
+## Beam
+
 To recieve Beam notifications register to "mimikBeam" using NotificationCentre:
 
 ```ObjectiveC
     [[NSNotificationCenter defaultCenter] addObserverForName:@"mimikBeam" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         // info will be included in note.userInfo
     }];
+```
+
+## Example
+
+```ObjectiveC
+
+@import Node;
+@import CocoaLumberjack;
+
+@implementation AppDelegate {
+    NodeService *nodeService;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    nodeService = [[NodeService alloc] init];
+    
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [nodeService stop];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {    
+    [nodeService start];
+}
+
 ```
 
 ## Author
