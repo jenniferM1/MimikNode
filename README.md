@@ -1,20 +1,27 @@
 # mimik Node
 
-mimik Node empowers developers to discover, connect, and communicate with various heterogeneous devices.
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+mimik Node enables developers to discover, connect, and communicate with various heterogeneous devices.
+It includes the following components:
+Drive: sharing storage and media
+Beam: remote media playback
+Edge: discovering and connecting devices.
 
 ## Requirements
 
+To use MimikNode a cocoapod enabled project is required. 
+
 ## Installation
 
-Edge is available through [mimik Pods](https://github.com/mimikpods). To install
+MimikNode is available through [mimik Pods](https://github.com/mimikpods). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Node'
+source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/mimikpods/Specs'
+```
+
+```ruby
+pod 'MimikNode'
 ```
 
 ## Author
