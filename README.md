@@ -94,6 +94,7 @@ To recieve Beam notifications register to "mimikBeam" using NotificationCentre:
     [nodeService start];
 }
 
+@end
 ```
 
 ## Author
