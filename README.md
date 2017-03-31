@@ -24,7 +24,23 @@ source 'https://github.com/mimikpods/Specs'
 pod 'MimikNode'
 ```
 
-## Starting and Stopping
+## Setup
+
+Import Node framework into the app:
+
+```ObjectiveC
+@import Node;
+```
+
+If interested in the logs add CocoaLumberJack framework and set it up:
+
+```ObjectiveC
+@import CocoaLumberjack;
+```
+
+```ObjectiveC
+[DDLog addLogger:[DDTTYLogger sharedInstance]];
+```
 
 MimikNode has a very simple API for starting and stoping all the mentioned services.
 Simply instanciate NodeService object:
@@ -39,6 +55,14 @@ And start and stop the service using the following API calls:
 
 ```ObjectiveC
 [nodeService stop];
+```
+
+To recieve Beam notifications register to "mimikBeam" using NotificationCentre:
+
+```ObjectiveC
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"mimikBeam" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        // info will be included in note.userInfo
+    }];
 ```
 
 ## Author
