@@ -24,6 +24,23 @@ source 'https://github.com/mimikpods/Specs'
 pod 'MimikNode'
 ```
 
+## Starting and Stopping
+
+MimikNode has a very simple API for starting and stoping all the mentioned services.
+Simply instanciate NodeService object:
+```ObjectiveC
+NodeService *nodeService = [[NodeService alloc] init];
+```
+And start and stop the service using the following API calls:
+
+```ObjectiveC
+[nodeService start];
+```
+
+```ObjectiveC
+[nodeService stop];
+```
+
 ## Author
 
 Mo Afrasiabi, mo.afrasiabi@mimik.com
