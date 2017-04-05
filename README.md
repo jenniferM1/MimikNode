@@ -109,6 +109,10 @@ To recieve Beam notifications register to "mimikBeam" using NotificationCentre:
 @end
 ```
 
+## Troubleshooting
+
+In case of linker error disable ```ENABLE_BITCODE``` in project settings page.
+
 ## Author
 
 Mo Afrasiabi, mo.afrasiabi@mimik.com
