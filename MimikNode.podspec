@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MimikNode'
-  s.version  = '1.2.1'
+  s.version  = '1.2.2'
   s.summary          = 'mimik Node library'
 
 # This description is used to generate tags and improve search results.
@@ -24,8 +24,8 @@ mimik Node empowers developers to discover, connect, and communicate with variou
   s.homepage         = 'https://www.mimik.com'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Mo Afrasiabi' => 'mo.afrasiabi@mimik.com' }
-  s.source           = { :git => 'https://github.com/jenniferM1/MimikNode.git', :tag => '1.2.1' }
+  s.author           = { 'jenniferM1' => 'jennifer.yu@mimik.com' }
+  s.source           = { :git => 'https://github.com/jenniferM1/MimikNode.git', :tag => '1.2.2' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
@@ -33,7 +33,7 @@ mimik Node empowers developers to discover, connect, and communicate with variou
   s.vendored_frameworks = 'Frameworks/Node.framework'
 
   s.dependency 'MimikBeam', '~> 1.1.0'
-  s.dependency 'MimikDrive', '~> 1.2.0'
+  s.dependency 'MimikDrive', '~> 1.1.0'
   s.dependency 'MimikEdge', '~> 1.0.0'
 
 end
